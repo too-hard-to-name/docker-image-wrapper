@@ -1,5 +1,5 @@
-# FROM k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
-# MAINTAINER wwzzhh <13501062476@139.com>
+FROM k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
+MAINTAINER wwzzhh <13501062476@139.com>
 #
 # Copyright 2017-2020 The Kubernetes Authors.
 #
@@ -16,9 +16,9 @@
 # limitations under the License.
 
 FROM gcr.io/distroless/static:latest
-LABEL maintainers="Kubernetes Authors"
-LABEL description="NFS subdir external provisioner"
-ARG binary=./bin/nfs-subdir-external-provisioner
+# LABEL maintainers="Kubernetes Authors"
+# LABEL description="NFS subdir external provisioner"
+# ARG binary=./bin/nfs-subdir-external-provisioner
 
-COPY ${binary} /nfs-subdir-external-provisioner
-ENTRYPOINT ["/nfs-subdir-external-provisioner"]
+# COPY ${binary} /nfs-subdir-external-provisioner
+# ENTRYPOINT ["/nfs-subdir-external-provisioner"]
